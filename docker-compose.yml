@@ -7,7 +7,7 @@ services:
       MYSQL_USER: ${DB_USER:-courier}
       MYSQL_PASSWORD: ${DB_PASSWORD:-courier_dev_only}
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
       - ./infra/mysql/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro

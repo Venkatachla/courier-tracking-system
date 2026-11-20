@@ -1,5 +1,6 @@
 package com.courier.tracking.event;
 
+import com.courier.tracking.config.TrackingRabbitConfig;
 import com.courier.tracking.repository.TrackingEventRepository;
 import com.courier.tracking.service.TrackingEventService;
 import org.slf4j.Logger;
