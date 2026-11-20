@@ -1,0 +1,8 @@
+# Optional localhost-only ports for debugging downstream services directly.
+services:
+  user-service:
+    ports: ["127.0.0.1:5001:5001"]
+  shipment-service:
+    ports: ["127.0.0.1:5002:5002"]
+  tracking-service:
+    ports: ["127.0.0.1:5003:5003"]

@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: ${USER_SERVICE_URL:http://user-service:5001}
+          predicates:
+            - Path=/api/auth/**,/api/users/**
+        - id: shipment-service
+          uri: ${SHIPMENT_SERVICE_URL:http://shipment-service:5002}
+          predicates:
+            - Path=/api/shipments/**
+        - id: tracking-service
+          uri: ${TRACKING_SERVICE_URL:http://tracking-service:5003}
+          predicates:
+            - Path=/api/tracking/**,/api/track/**
